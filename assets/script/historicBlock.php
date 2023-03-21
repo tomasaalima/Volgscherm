@@ -1,4 +1,5 @@
 <?php
+
 //Invoca arquivo que realiza a conexão com o banco de dados
 require('db_connection.php');
 

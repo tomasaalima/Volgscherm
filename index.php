@@ -110,9 +110,9 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
             <!--Formulário da inserção-->
             <form id="form" class="formulary" action="" method="post">
                 <label class="label-formulary" for="user">Usuário</label>
-                <input class="input-formulary" type="text" name="user">
+                <input class="input-formulary" type="text" name="user" placeholder=" antonio@gmail.com">
                 <label class="label-formulary" for="password">Senha</label>
-                <input class="input-formulary" type="password" name="password" autocomplete="current-password">
+                <input class="input-formulary" type="password" name="password" autocomplete="current-password" placeholder=" ••••••••">
                 <div class="sub-elements">
                     <a href="assets/script/passwordChange.php">Esqueceu Sua Senha?</a>
                     <a href="assets/script/userCreation.php">Cadastrar Usuário</a>

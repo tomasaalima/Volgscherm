@@ -1,4 +1,10 @@
 <?php
+
+//limpar Cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 //Invoca arquivo com as principais funções do painel dos gráficos
 require('dashboardHome_control.php');
 
@@ -270,10 +276,10 @@ require('sessionProtect.php');
 
             <!--Links de downloads-->
             <div class="printer-btns">
-                <p title="Realizar download de arquivo em formato de planilha">Exportar Relatórios:</p>
-                <p title="Planilha com o número de impressões diárias, junto ao número de impressoras ultilizadas"><a href="csvExportOne.php" class="report-btn">Tabela Geral</a></p>
-                <p title="Planilha com o total de impressões de cada impressora"><a href="csvExportTwo.php" class="report-btn">Tabela Impressoras</a></p>
-                <p title="Planilha com o total de impressões por setor"><a href="csvExportThree.php" class="report-btn">Tabela Setores</a></p>
+                <p title="Realizar download de arquivo em formato de planilha">EXPORTAR RELATÓRIOS:</p>
+                <p title="Planilha com o número de impressões diárias, junto ao número de impressoras ultilizadas"><a href="csvExportOne.php" class="report-btn">TABELA GERAL</a></p>
+                <p title="Planilha com o total de impressões de cada impressora"><a href="csvExportTwo.php" class="report-btn">TABELA IMPRESSORAS</a></p>
+                <p title="Planilha com o total de impressões por setor"><a href="csvExportThree.php" class="report-btn">TABELA SETORES</a></p>
             </div>
 
         </div>

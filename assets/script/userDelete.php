@@ -1,4 +1,10 @@
 <?php
+
+//limpar Cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 //Invoca arquivo que protege a sessão, evitando acesso sem log-in
 require('sessionProtect.php');
 
@@ -79,6 +85,44 @@ $systemColors = getColors();
             justify-content: space-around;
             gap: 30px;
         }
+
+        .chave{
+            font-size: 20px;
+        }
+    
+        .submit{
+            border-radius: 10px;
+            line-height: 25px;
+            text-align: center;
+        }
+
+
+        .submit:hover{
+            cursor: pointer;
+            background-color:rgb(218, 208, 208);
+        }
+        p{
+            font-size: 22px;
+            font-weight: 500;
+        }
+
+        .subm{
+            border-radius: 10px;
+            line-height: 30px;
+            text-align: center;
+            width: 190px;
+            color: red;
+            border: 1px solid red;
+        }
+
+        .subm:hover{
+            cursor: pointer;
+            background-color: rgb(212, 95, 95);
+            color: white;
+        }
+
+
+
     </style>
 
     <!--Recurso google para biblioteca de ícones-->
@@ -141,12 +185,12 @@ $systemColors = getColors();
                 <form action="" method="post">
                     <p>Se deletar essa conta será direcionado a tela de login e não poderá mais iniciar sessão com os dados da mesma.</p>
                     <div title="Chave serial do produto">
-                        <label for="productKey">Chave do Produto</label>
-                        <input type="text" name="productKey">
+                        <label for="productKey" class="chave">Chave do Produto:</label><br><br>
+                        <input type="text" name="productKey" class="submit" placeholder="•••••">
                     </div>
 
                     <!--Botão de confirmação-->
-                    <div title="Deletar sua conta"><input type="submit" value="Deletar Minha Conta"></div>
+                    <div title="Deletar sua conta"><input type="submit" value="Deletar Minha Conta" class="subm"></div>
                 </form>
             </article>
         </div>

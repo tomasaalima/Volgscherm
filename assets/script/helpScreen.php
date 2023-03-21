@@ -1,4 +1,10 @@
 <?php
+
+//limpar Cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 //Invoca arquivo que protege a sessão, evitando acesso sem log-in
 require('sessionProtect.php');
 
@@ -44,8 +50,19 @@ $systemColors = getColors();
         img {
             background-color: white;
             max-height: 200px;
-            margin-top: 100px;
+            margin-top: 50px;
             border-radius: 10px;
+        }
+
+        .remote{
+            font-size: 20px;
+            width: 85%;
+            
+        }
+        p{
+            text-align: justify;
+            justify-content: center;
+            align-items: center;
         }
     </style>
 
@@ -84,21 +101,24 @@ $systemColors = getColors();
 
             <!--Informações-->
             <article>
-                <p>
-                    <!--Redirecionamento Github-->
-                    O projeto <strong>Volgscherm</strong> está em constante desenvolvimento e é disponibilizado remotamente no <a target="_blank" href="https://github.com/tomasaalima/volgscherm"><strong title="Direcionar ao GitHub">GitHub.</strong></a>
-                </p>
-                <p>
-                    <!--Redirecionamento para envio de e-mail-->
-                    Para sugestões ou reportar bugs você poderá entrar em contado pelo email: <a target="_blank" href="mailto:taal@discente.ifpe.edu.br"><strong title="Enviar E-mail">taal@discente.ifpe.edu.br.</strong></a>
-                </p>
-                <p>
-                    Para mais informações consultar a documentação do sistema.
-                </p>
-                <!--imagem volgscherm-->
-                <picture title="Logo da impresa">
-                    <img src="../img/logo.png" alt="logo volgscherm">
-                </picture>
+                <div class="remote">
+                    <br>
+                    <p >
+                        <!--Redirecionamento Github-->
+                        O projeto <strong>Volgscherm</strong> está em constante desenvolvimento e é disponibilizado remotamente no <a target="_blank" href="https://github.com/tomasaalima/volgscherm"><strong title="Direcionar ao GitHub">GitHub.</strong></a>
+                    </p><br>
+                    <p>
+                        <!--Redirecionamento para envio de e-mail-->
+                        Para sugestões ou reportar bugs você poderá entrar em contado pelo email: <a target="_blank" href="mailto:taal@discente.ifpe.edu.br"><strong title="Enviar E-mail">taal@discente.ifpe.edu.br </strong></a> ou <a target="_blank" href="mailto:jrem1@discente.ifpe.edu.br"><strong title="Enviar E-mail">jrem1@discente.ifpe.edu.br.</strong></a>
+                    </p><br>
+                    <p>
+                        Para mais informações consultar a documentação do sistema.
+                    </p>
+                    <!--imagem volgscherm-->
+                    <picture title="Logo da impresa">
+                        <img src="../img/logo.png" alt="logo volgscherm">
+                    </picture>
+                </div>
             </article>
         </div>
     </main>

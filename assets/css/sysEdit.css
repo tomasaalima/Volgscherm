@@ -136,3 +136,6 @@ article {
     flex-direction: column;
     justify-content: start;
 }
+.remote{
+    font-size: 25px;
+}

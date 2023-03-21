@@ -1,4 +1,10 @@
 <?php
+
+//limpar Cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 //Invoca arquivo que realiza a conexão com o banco de dados
 require("db_connection.php");
 
@@ -136,13 +142,13 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
             <!--Formulário de inserção de dados-->
             <form class="formulary" action="" method="post">
                 <label class="label-formulary" for="name">Nome de Usuário</label>
-                <input class="input-formulary" type="text" name="user-name">
+                <input class="input-formulary" type="text" name="user-name"placeholder="antonio@gmail.com">
                 <label class="label-formulary" for="password">Senha</label>
-                <input class="input-formulary" type="password" name="password">
+                <input class="input-formulary" type="password" name="password" placeholder="••••••••">
                 <label class="label-formulary" for="password">Repita a Senha</label>
-                <input class="input-formulary" type="password" name="repeat-password">
+                <input class="input-formulary" type="password" name="repeat-password" placeholder="••••••••">
                 <label class="label-formulary" for="user">Chave do Produto</label>
-                <input class="input-formulary" type="text" name="key">
+                <input class="input-formulary" type="text" name="key" placeholder="•••••">
                 <div class="sub-elements">
 
                     <!--redirecionamento para página de informações sobre a chave do produto-->

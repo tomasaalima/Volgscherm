@@ -1,5 +1,11 @@
 <?php
 
+//limpar Cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
+
 //Onde está hospedado o banco de dados
 $host = "localhost";
 
@@ -7,7 +13,7 @@ $host = "localhost";
 $user = "root";
 
 //Senha do proprietário
-$pass = "root";
+$pass = "aqui742830";
 
 //Nome do banco de dados
 $dbname = "volgscherm";

@@ -1,4 +1,10 @@
 <?php
+
+//limpar Cache
+header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header("Cache-Control: post-check=0, pre-check=0", false);
+header("Pragma: no-cache");
+
 //invoca arquivo para trabalhar com os temas do sistema e suas respectivas cores
 require("systemThemeColors.php");
 
@@ -79,7 +85,7 @@ $systemColors = getColors();
             <!--Barra de busca-->
             <div title="Campo de busca" class="search-bar">
                 <form action="" method="post">
-                    <input type="text" placeholder="Search.." name="search">
+                    <input type="text" placeholder="Search.." name="search" class="searchI">
                     <button title="Buscar" class="glass" type="submit">
                         <i class="fa fa-search"></i>
                     </button>
