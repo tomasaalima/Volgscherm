@@ -1,6 +1,6 @@
 <?php
 //Solicita arquivo de conexão
-require("assets/script/db_connection.php");
+require("src/php/connections/mysqliConnection.php");
 
 //Contenção do alerta
 $SweetAlert = false;
@@ -50,7 +50,7 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
             $_SESSION['password'] = $user_data['password'];
 
             //concede acesso
-            header("location: assets/script/dashboardHome.php");
+            header("location: src/php/pages/home.php");
         } else {
             //Bloqueia acesso
             $message = "Falha ao logar! Usuário ou Senha Incorretos";
