@@ -63,14 +63,34 @@ $systemColors = getColors();
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        charset="UTF-8"
+    >
+    <meta 
+        http-equiv="X-UA-Compatible" 
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/sysEdit.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/navMenu.css">
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/base.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/home.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/sysEdit.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/navMenu.css"
+    >
 
     <style>
         article {
@@ -126,71 +146,135 @@ $systemColors = getColors();
     </style>
 
     <!--Recurso google para biblioteca de ícones-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" 
+    />
 
-    <title>Deletar Conta</title>
+    <title>
+        Deletar Conta
+    </title>
 
 </head>
 
 <body>
 
     <?php
-    require('../components/headerBlock.php'); //invocação do header da página 
+        require('../components/headerBlock.php'); //invocação do header da página 
     ?>
 
     <!--Ivocação da biblioteca respectiva aos sweetalerts-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script 
+        src="//cdn.jsdelivr.net/npm/sweetalert2@11"
+    >
+    </script>
 
     <script>
 
         //Execução do sweetAlert
         <?php
-        if ($SweetAlert === true){
-            echo "Swal.fire({
-                icon: '$icon',
-                title: '$title',
-                text: '$message'
-                })";
-                $SweetAlert = false;
-        }
+            if ($SweetAlert === true){
+                echo "Swal.fire({
+                    icon: '$icon',
+                    title: '$title',
+                    text: '$message'
+                    })";
+                    $SweetAlert = false;
+            }
         ?>
     </script>
 
     <main>
 
         <!--Bloco de opções-->
-        <div class="config-container">
-            <ul class="unordered-element">
-                <div title="Opção de personalização do sistema" class="config-topics">
-                    <a href="adjusts.php">
-                        <li class="li-topic">Personalização</li>
+        <div 
+            class="config-container"
+        >
+            <ul 
+                class="unordered-element"
+            >
+                <div 
+                    title="Opção de personalização do sistema" 
+                    class="config-topics"
+                >
+                    <a 
+                        href="adjusts.php"
+                >
+                        <li 
+                            class="li-topic"
+                        >
+                            Personalização
+                        </li>
                     </a>
                 </div>
-                <div title="Opção de exclusão de conta" class="config-topics actual-atribute">
-                    <a href="userDelete.php">
-                        <li class="li-topic">Deletar Usuário</li>
+                <div 
+                    title="Opção de exclusão de conta" 
+                    class="config-topics actual-atribute"
+                >
+                    <a 
+                        href="userDelete.php"
+                    >
+                        <li 
+                            class="li-topic"
+                        >
+                            Deletar Usuário
+                        </li>
                     </a>
                 </div>
-                <div title="Informações sobre o sistema" class="config-topics">
-                    <a href="helpScreen.php">
-                        <li class="li-topic">Ajuda</li>
+                <div 
+                    title="Informações sobre o sistema" 
+                    class="config-topics"
+                >
+                    <a 
+                        href="helpScreen.php"
+                    >
+                        <li 
+                            class="li-topic"
+                        >
+                            Ajuda
+                        </li>
                     </a>
                 </div>
             </ul>
 
             <!--Bloco de informações respectivas a opção selecionada-->
             <article>
-
                 <!--Formulário para remoção do usuário(inserção de chave do produto)-->
-                <form action="" method="post">
-                    <p>Se deletar essa conta será direcionado a tela de login e não poderá mais iniciar sessão com os dados da mesma.</p>
-                    <div title="Chave serial do produto">
-                        <label for="productKey" class="chave">Chave do Produto:</label><br><br>
-                        <input type="text" name="productKey" class="submit" placeholder="•••••">
+                <form 
+                    action="" 
+                    method="post"
+                >
+                    <p>
+                        Se deletar essa conta será direcionado a tela de login e não poderá mais iniciar sessão com os dados da mesma.
+                    </p>
+                    <div 
+                        title="Chave serial do produto"
+                    >
+                        <label 
+                            for="productKey" 
+                            class="chave"
+                        >
+                            Chave do Produto:
+                        </label>
+                        <br><br>
+                        <input 
+                            type="text" 
+                            name="productKey" 
+                            class="submit" 
+                            placeholder="•••••"
+                        >
                     </div>
 
                     <!--Botão de confirmação-->
-                    <div title="Deletar sua conta"><input type="submit" value="Deletar Minha Conta" class="subm"></div>
+                    <div 
+                        title="Deletar sua conta"
+                    >
+                        <input 
+                        type="submit" 
+                        value="Deletar Minha Conta" 
+                        class="subm"
+                        >
+                    </div>
                 </form>
             </article>
         </div>

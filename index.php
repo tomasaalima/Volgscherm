@@ -65,61 +65,140 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
 ?>
 
 <!DOCTYPE html>
-<html lang="pt-br">
+<html 
+    lang="pt-br"
+>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Systema de acompanhamento de dados para impressoras compatíveis ao protocolo SNMP v1, v2c e v3">
-    <meta name="keywords" content="dashboard, html, charts, impressoras, SNMP">
-    <link rel="stylesheet" href="public/css/base.css">
-    <link rel="stylesheet" href="public/css/form.css">
+    <meta 
+        charset="UTF-8"
+    >
+    <meta 
+        http-equiv="X-UA-Compatible" 
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+    <meta 
+        name="description" 
+        content="Systema de acompanhamento de dados para impressoras compatíveis ao protocolo SNMP v1, v2c e v3"
+    >
+    <meta 
+        name="keywords" 
+        content="dashboard, html, charts, impressoras, SNMP"
+    >
+    <link 
+        rel="stylesheet" 
+        href="public/css/base.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="public/css/form.css"
+    >
 
-    <title>volgscherm</title>
+    <title>
+        volgscherm
+    </title>
 
 </head>
 
 <body>
-
     <!--Ivocação da biblioteca respectiva aos sweetalerts-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script 
+        src="//cdn.jsdelivr.net/npm/sweetalert2@11"
+    >
+    </script>
 
     <script>
-
         //Execução do sweetAlert
         <?php
-        if ($SweetAlert === true){
-            echo "Swal.fire({
-                icon: '$icon',
-                title: '$title',
-                text: '$message'
-                })";
-                $SweetAlert = false;
-        }
+            if ($SweetAlert === true){
+                echo "Swal.fire({
+                    icon: '$icon',
+                    title: '$title',
+                    text: '$message'
+                    })";
+                    $SweetAlert = false;
+            }
         ?>
     </script>
 
-    <div class="container-login">
-        <img class="logo-image" src="public/img/logo.png" alt="logo da empresa">
-        <div class="container-line">
-            <hr class="line">
+    <div 
+        class="container-login"
+    >
+        <img 
+            class="logo-image" 
+            src="public/img/logo.png" 
+            alt="logo da empresa"
+        >
+        <div 
+            class="container-line"
+        >
+            <hr 
+                class="line"
+            >
         </div>
-        <div class="container-formulary">
-
+        <div 
+            class="container-formulary"
+        >
             <!--Formulário da inserção-->
-            <form id="form" class="formulary" action="" method="post">
-                <label class="label-formulary" for="user">Usuário</label>
-                <input class="input-formulary" type="text" name="user" placeholder=" antonio@gmail.com">
-                <label class="label-formulary" for="password">Senha</label>
-                <input class="input-formulary" type="password" name="password" autocomplete="current-password" placeholder=" ••••••••">
-                <div class="sub-elements">
-                    <a href="src/php/pages/passwordChange.php">Esqueceu Sua Senha?</a>
-                    <a href="src/php/pages/userCreation.php">Cadastrar Usuário</a>
+            <form 
+                id="form" 
+                class="formulary" 
+                action="" 
+                method="post"
+            >
+                <label 
+                    class="label-formulary" 
+                    for="user"
+                >
+                    Usuário
+                </label>
+                <input 
+                    class="input-formulary" 
+                    type="text" 
+                    name="user" 
+                    placeholder=" antonio@gmail.com"
+                >
+                <label 
+                    class="label-formulary" 
+                    for="password"
+                >
+                    Senha
+                </label>
+                <input 
+                    class="input-formulary" 
+                    type="password" 
+                    name="password" 
+                    autocomplete="current-password" 
+                    placeholder=" ••••••••"
+                >
+                <div 
+                    class="sub-elements"
+                >
+                    <a 
+                        href="src/php/pages/passwordChange.php"
+                    >
+                        Esqueceu Sua Senha?
+                    </a>
+                    <a 
+                        href="src/php/pages/userCreation.php"
+                    >
+                        Cadastrar Usuário
+                    </a>
                 </div>
-                <div class="form-btns">
+                <div 
+                    class="form-btns"
+                >
                     <!--Submete ação-->
-                    <button class="submit-btn" type="submit">Executar</button>
+                    <button 
+                        class="submit-btn" 
+                        type="submit"
+                    >
+                        Executar
+                    </button>
                 </div>
             </form>
         </div>

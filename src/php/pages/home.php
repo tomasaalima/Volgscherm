@@ -23,15 +23,39 @@ require('../components/sessionProtection.php');
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/navmenu.css">
+    <meta 
+        charset="UTF-8"
+    >
+    <meta 
+        http-equiv="X-UA-Compatible"    
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
+    <link 
+        rel="stylesheet" 
+        
+        href="/volgscherm/public/css/base.css"
+    >
+    <link 
+        rel="stylesheet" 
+        
+        href="/volgscherm/public/css/home.css"
+    >
+    <link 
+        rel="stylesheet" 
+        
+        href="/volgscherm/public/css/navmenu.css"
+    >
 
     <!--Recurso google para biblioteca de ícones-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link 
+        rel="stylesheet" 
+        
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" 
+    />
 
     <!--Elementos que apresentaram mal funcionamento com caminhos relativos ao css-->
     <style>
@@ -51,13 +75,22 @@ require('../components/sessionProtection.php');
         }
     </style>
 
-    <title>volgscherm - Painel Princípal</title>
+    <title>
+        volgscherm - Painel Princípal
+    </title>
 
     <!--Recurso google para biblioteca de charts-->
-    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script 
+        
+        type="text/javascript" 
+        src="https://www.gstatic.com/charts/loader.js"
+    >
+    </script>
 
     <!--API do google, Gráfico de linhas-->
-    <script type="text/javascript">
+    <script 
+        type="text/javascript"
+    >
         google.charts.load('current', {
             packages: ['corechart', 'line']
         });
@@ -210,60 +243,167 @@ require('../components/sessionProtection.php');
 
 <body>
     <?php
-    require('../components/headerBlock.php'); //invocação do header da página 
+        require('../components/headerBlock.php'); //invocação do header da página 
     ?>
     <main>
 
         <!--Navegação entre painéis-->
-        <div class="main-nav">
+        <div 
+            class="main-nav"
+        >
             <nav>
-                <a title="Painel principal" href="#" class="actual">DashBoard</a>
-                <a title="Painel de impressoras" href="printers.php">Impressoras</a>
+                <a 
+                    title="Painel principal" 
+                    href="#" 
+                    class="actual"
+                >
+                    DashBoard
+                </a>
+                <a 
+                    title="Painel de impressoras" 
+                    href="printers.php"
+                >
+                    Impressoras
+                </a>
             </nav>
         </div>
 
         <!--Container de informações-->
-        <div class="main-info">
-            <div title="Feedback sobre a integridade do sistema" class="info-group">
+        <div 
+            class="main-info"
+        >
+            <div 
+                title="Feedback sobre a integridade do sistema" 
+                class="info-group"
+            >
                 Status:
-                <span class="info-data">Ok</span>
+                <span 
+                    class="info-data"
+                >
+                    Ok
+                </span>
                 Dependências:
-                <span class="info-data"></span>
+                <span 
+                    class="info-data"
+                >
+                </span>
             </div>
-            <div title="Contador a partir da última execução" class="info-group">
+            <div 
+                title="Contador a partir da última execução" 
+                class="info-group"
+            >
                 Último auto-recover:
-                <span class="info-data">25 Dias Atrás</span>
+                <span 
+                    class="info-data"
+                >
+                    25 Dias Atrás
+                </span>
                 Última captura de dados:
-                <span class="info-data">3 minutos 43 segundos</span>
+                <span 
+                    class="info-data"
+                >
+                    3 minutos 43 segundos
+                </span>
             </div>
-            <div title="Definições de intervalos " class="info-group">
+            <div 
+                title="Definições de intervalos " 
+                class="info-group"
+            >
                 Intervalo(auto-recover):
-                <span class="info-data">30 dias</span>
+                <span 
+                    class="info-data"
+                >
+                    30 dias
+                </span>
                 Intervalo(captura de dados):
-                <span class="info-data">5 minutos</span>
+                <span 
+                    class="info-data"
+                >
+                    5 minutos
+                </span>
             </div>
-            <div title="Faixa IP para busca" class="info-group">
+            <div 
+                title="Faixa IP para busca" 
+                class="info-group"
+            >
                 Faixa incial de Busca:
-                <span class="info-data">10.26.1.200</span>
+                <span 
+                    class="info-data"
+                >
+                    10.26.1.200
+                </span>
                 Faixa Final de Busca:
-                <span class="info-data">10.26.1.300</span>
+                <span 
+                    class="info-data"
+                >
+                    10.26.1.300
+                </span>
             </div>
         </div>
 
         <!--Container de gráficos-->
-        <div class="main-dashboard">
-            <nav class="period-nav">
-                <a title="Indicador de período 1 Dia" id="1D" href="../pages/home.php?1D=true">1D</a>
-                <a title="Indicador de período 1 Mês" id="1M" href="../pages/home.php?1M=true">1M</a>
-                <a title="Indicador de período 5 Meses" id="5M" href="../pages/home.php?5M=true">5M</a>
-                <a title="Indicador de período 1 Ano" id="1A" href="../pages/home.php?1A=true">1A</a>
-                <a title="Indicador de período Total" id="MAX" href="../pages/home.php?MAX=true">MAX</a>
+        <div 
+            class="main-dashboard"
+        >
+            <nav 
+                class="period-nav"
+            >
+                <a 
+                    title="Indicador de período 1 Dia" 
+                    id="1D" 
+                    href="../pages/home.php?1D=true"
+                >
+                    1D
+                </a>
+                <a 
+                    title="Indicador de período 1 Mês" 
+                    id="1M" 
+                    href="../pages/home.php?1M=true"
+                >
+                    1M
+                </a>
+                <a 
+                    title="Indicador de período 5 Meses" 
+                    id="5M" 
+                    href="../pages/home.php?5M=true"
+                >
+                    5M
+                </a>
+                <a 
+                    title="Indicador de período 1 Ano" 
+                    id="1A" 
+                    href="../pages/home.php?1A=true"
+                >
+                    1A
+                </a>
+                <a 
+                    title="Indicador de período Total" 
+                    id="MAX" 
+                    href="../pages/home.php?MAX=true"
+                >
+                    MAX
+                </a>
             </nav>
 
             <!--Chamado aos gráficos charts-->
-            <div title="Gráfico de linhas de impressões por data" id="line-chart" style="width: 100%; height: 500px;"></div>
-            <div title="Gráfico de barras de impressões por impressora" id="bar-chart" style="width: 100%; height: 500px;"></div>
-            <div title="Gráfico em pizza de impressões por setor" id="pie-chart" style="width: 50%; height: 500px; margin: auto;"></div>
+            <div 
+                title="Gráfico de linhas de impressões por data" 
+                id="line-chart" 
+                style="width: 100%; height: 500px;"
+            >
+            </div>
+            <div 
+                title="Gráfico de barras de impressões por impressora" 
+                id="bar-chart" 
+                style="width: 100%; height: 500px;"
+            >
+            </div>
+            <div 
+                title="Gráfico em pizza de impressões por setor" 
+                id="pie-chart" 
+                style="width: 50%; height: 500px; margin: auto;"
+            >
+            </div>
 
             <script>
                 /*Aplica bordar em baixo no periodo selecionado*/
@@ -275,21 +415,60 @@ require('../components/sessionProtection.php');
             </script>
 
             <!--Links de downloads-->
-            <div class="printer-btns">
-                <p title="Realizar download de arquivo em formato de planilha">EXPORTAR RELATÓRIOS:</p>
-                <p title="Planilha com o número de impressões diárias, junto ao número de impressoras ultilizadas"><a href="../export/csvOne.php" class="report-btn">TABELA GERAL</a></p>
-                <p title="Planilha com o total de impressões de cada impressora"><a href="../export/csvTwo.php" class="report-btn">TABELA IMPRESSORAS</a></p>
-                <p title="Planilha com o total de impressões por setor"><a href="../export/csvThree.php" class="report-btn">TABELA SETORES</a></p>
+            <div 
+                class="printer-btns"
+            >
+                <p 
+                    title="Realizar download de arquivo em formato de planilha"
+                >
+                    EXPORTAR RELATÓRIOS:
+                </p>
+                <p 
+                    title="Planilha com o número de impressões diárias, junto ao número de impressoras ultilizadas"
+                >
+                    <a 
+                        href="../export/csvOne.php" 
+                        class="report-btn"
+                    >
+                        TABELA GERAL
+                    </a>
+                </p>
+                <p 
+                    title="Planilha com o total de impressões de cada impressora"
+                >
+                    <a 
+                        href="../export/csvTwo.php" 
+                        class="report-btn"
+                    >
+                        TABELA IMPRESSORAS
+                    </a>
+                </p>
+                <p 
+                    title="Planilha com o total de impressões por setor"
+                >
+                    <a 
+                        href="../export/csvThree.php" 
+                        class="report-btn"
+                    >
+                        TABELA SETORES
+                    </a>
+                </p>
             </div>
 
         </div>
 
         <!--Container de Histórico-->
-        <div class="historic">
-            <h1 title="Histórico de dados adquiridos na rede">HISTÓRICO</h1>
+        <div 
+            class="historic"
+        >
+            <h1 
+                title="Histórico de dados adquiridos na rede"
+            >
+                HISTÓRICO
+            </h1>
             <?php
-            //Importação de bloco do histórico
-            require("../components/historicBlock.php");
+                //Importação de bloco do histórico
+                require("../components/historicBlock.php");
             ?>
         </div>
     </main>

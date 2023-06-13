@@ -102,65 +102,157 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        charset="UTF-8"
+    >
+    <meta 
+        http-equiv="X-UA-Compatible" 
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/form.css">
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/base.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/form.css"
+    >
 
-    <title>Cadastro</title>
+    <title>
+        Cadastro
+    </title>
 
 </head>
 
 <body>
 
     <!--Ivocação da biblioteca respectiva aos sweetalerts-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script 
+        src="//cdn.jsdelivr.net/npm/sweetalert2@11"
+    >
+    </script>
 
     <script>
         //Execução do sweetAlert
         <?php
-        if ($SweetAlert === true) {
-            echo "Swal.fire({
-            icon: '$icon',
-            title: '$title',
-            text: '$message'
-            })";
-            $SweetAlert = false;
-        }
+            if ($SweetAlert === true) {
+                echo "Swal.fire({
+                icon: '$icon',
+                title: '$title',
+                text: '$message'
+                })";
+                $SweetAlert = false;
+            }
         ?>
     </script>
 
-    <div class="container-login">
-        <img class="logo-image" src="/volgscherm/public/img/logo.png" alt="logo da empresa">
-        <div class="container-line">
-            <hr class="line">
+    <div 
+        class="container-login"
+    >
+        <img 
+            class="logo-image" 
+            src="/volgscherm/public/img/logo.png" 
+            alt="logo da empresa"
+        >
+        <div 
+            class="container-line"
+        >
+            <hr 
+                class="line"
+            >
         </div>
-        <div class="container-formulary">
+        <div 
+            class="container-formulary"
+        >
 
             <!--Formulário de inserção de dados-->
-            <form class="formulary" action="" method="post">
-                <label class="label-formulary" for="name">Nome de Usuário</label>
-                <input class="input-formulary" type="text" name="user-name"placeholder="antonio@gmail.com">
-                <label class="label-formulary" for="password">Senha</label>
-                <input class="input-formulary" type="password" name="password" placeholder="••••••••">
-                <label class="label-formulary" for="password">Repita a Senha</label>
-                <input class="input-formulary" type="password" name="repeat-password" placeholder="••••••••">
-                <label class="label-formulary" for="user">Chave do Produto</label>
-                <input class="input-formulary" type="text" name="key" placeholder="•••••">
+            <form 
+                class="formulary" 
+                action="" 
+                method="post"
+            >
+                <label 
+                    class="label-formulary" 
+                    for="name"
+                >
+                    Nome de Usuário
+                </label>
+                <input 
+                    class="input-formulary" 
+                    type="text" 
+                    name="user-name"
+                    placeholder="antonio@gmail.com">
+                <label 
+                    class="label-formulary" 
+                    for="password"
+                >
+                    Senha
+                </label>
+                <input 
+                    class="input-formulary" 
+                    type="password" 
+                    name="password" 
+                    placeholder="••••••••"
+                >
+                <label 
+                    class="label-formulary" 
+                    for="password"
+                >
+                    Repita a Senha
+                </label>
+                <input 
+                    class="input-formulary" 
+                    type="password" 
+                    
+                    name="repeat-password" 
+                    
+                    placeholder="••••••••"
+                >
+                <label 
+                    class="label-formulary" 
+                    for="user"
+                >
+                    Chave do Produto
+                </label>
+                <input 
+                    class="input-formulary" 
+                    type="text" 
+                    name="key" 
+                    placeholder="•••••"
+                >
                 <div class="sub-elements">
 
                     <!--redirecionamento para página de informações sobre a chave do produto-->
-                    <a href="keyGuide.php">Resgatar Chave de Acesso</a>
-                </div>
-                <div class="form-btns">
-                    <a class="submit-btn" href="/volgscherm/index.php">
-
-                        <!--Botão de retorno-->
-                        <input class="toback" type="button" value="Voltar">
+                    <a 
+                        href="keyGuide.php"
+                    >
+                        Resgatar Chave de Acesso
                     </a>
-                    <input class="submit-btn" type="submit" value="Cadastrar">
+                </div>
+                <div 
+                    class="form-btns"
+                >
+                    <a 
+                        class="submit-btn" 
+                        href="/volgscherm/index.php"
+                    >
+                        <!--Botão de retorno-->
+                        <input 
+                            class="toback" 
+                            type="button" 
+                            value="Voltar"
+                        >
+                    </a>
+                    <input 
+                        class="submit-btn" 
+                        type="submit" 
+                        value="Cadastrar"
+                    >
                 </div>
             </form>
         </div>

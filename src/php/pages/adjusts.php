@@ -45,133 +45,304 @@ uploadFileUser();
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        charset="UTF-8"
+    >
+    <meta 
+        http-equiv="X-UA-Compatible" 
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/sysEdit.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/navMenu.css">
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/base.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/home.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/sysEdit.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/navMenu.css"
+    >
 
     <!--Recurso google para biblioteca de ícones-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" 
+    />
 
-    <title>Personalização</title>
+    <title>
+        Personalização
+    </title>
 
 </head>
 
 <body>
 
     <!--Ivocação da biblioteca respectiva aos sweetalerts-->
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script 
+        src="//cdn.jsdelivr.net/npm/sweetalert2@11"
+    >
+    </script>
 
     <script>
 
         //Execução do sweetAlert
         <?php
-        if ($SweetAlert === true){
-            echo "Swal.fire({
-                icon: '$icon',
-                title: '$title',
-                text: '$message'
-                })";
-                $SweetAlert = false;
-        }
+            if ($SweetAlert === true){
+                echo "Swal.fire({
+                    icon: '$icon',
+                    title: '$title',
+                    text: '$message'
+                    })";
+                    $SweetAlert = false;
+            }
         ?>
     </script>
     
     <?php
-    require('../components/headerBlock.php'); //invocação do header da página 
+        require('../components/headerBlock.php'); //invocação do header da página 
     ?>
 
     <main>
 
         <!--Bloco de opções-->
-        <div class="config-container">
-            <ul class="unordered-element">
-                <div title="Opção de personalização do sistema" class="config-topics actual-atribute">
-                    <a href="adjusts.php">
-                        <li class="li-topic">Personalização</li>
+        <div 
+            class="config-container"
+        >
+            <ul 
+                class="unordered-element"
+            >
+                <div 
+                    title="Opção de personalização do sistema" 
+                    class="config-topics actual-atribute"
+                >
+                    <a 
+                        href="adjusts.php"
+                    >
+                        <li 
+                            class="li-topic"
+                        >
+                            Personalização
+                        </li>
                     </a>
                 </div>
-                <div title="Opção de exclusão de conta" class="config-topics">
-                    <a href="userDelete.php">
-                        <li class="li-topic">Deletar Usuário</li>
+                <div 
+                    title="Opção de exclusão de conta" 
+                    class="config-topics"
+                >
+                    <a 
+                        href="userDelete.php"
+                    >
+                        <li 
+                            class="li-topic"
+                        >
+                            Deletar Usuário
+                        </li>
                     </a>
                 </div>
-                <div title="Informações sobre o sistema" class="config-topics">
-                    <a href="helpScreen.php">
-                        <li class="li-topic">Ajuda</li>
+                <div 
+                    title="Informações sobre o sistema" 
+                    class="config-topics"
+                >
+                    <a 
+                        href="helpScreen.php"
+                    >
+                        <li 
+                            class="li-topic"
+                        >
+                            Ajuda
+                        </li>
                     </a>
                 </div>
             </ul>
 
             <!--Bloco de informações respectivas a opção selecionada-->
             <article>
-                <div class="img-edit">
-
+                <div 
+                    class="img-edit"
+                >
                     <!--Imagem do usuário-->
-                    <div title="Imagem do usuário">
-                        <img class="user-img-edit" src="../pages/uploads/user-img.jpg" alt="imagem do usuário">
+                    <div 
+                        title="Imagem do usuário"
+                    >
+                        <img 
+                            class="user-img-edit" 
+                            src="../pages/uploads/user-img.jpg" 
+                            alt="imagem do usuário"
+                        >
                     </div>
 
                     <!--Formulário de upload-->
-                    <div title="Realizar Upload" class="choose-file">
+                    <div 
+                        title="Realizar Upload" 
+                        class="choose-file"
+                    >
                         Mudar Imagem de Usuário
-                        <form action="#" method="post" enctype="multipart/form-data">
-                            <input type="file" name="arquive">
-                            <input style="cursor: pointer;" type="submit" value="Aplicar" name="action" class="apply-btn">
+                        <form 
+                            action="#" 
+                            method="post" 
+                            enctype="multipart/form-data"
+                        >
+                            <input 
+                                type="file" 
+                                name="arquive"
+                            >
+                            <input 
+                                style="cursor: pointer;" 
+                                type="submit" 
+                                value="Aplicar" 
+                                name="action" 
+                                class="apply-btn"
+                            >
                         </form>
                     </div>
                 </div>
 
                 <!--Seleção de tema-->
-                <div class="theme-edit">
+                <div 
+                    class="theme-edit"
+                >
                     <div>
-                        <a href="adjusts.php?dark=true">
-                            <div title="Tema Dark" id="01" class="themes link">
-
+                        <a 
+                            href="adjusts.php?dark=true"
+                        >
+                            <div 
+                                title="Tema Dark" 
+                                id="01" 
+                                class="themes link"
+                            >
                                 <!--Tema Dark-->
-                                <button class="theme-btn" onclick="setTheme('01')">
-                                    <div class="dark-theme">
-                                        <div style="background-color: #1D1E26;" class="theme-color"></div>
-                                        <div style="background-color: #202126;" class="theme-color"></div>
-                                        <div style="background-color: #737272;" class="theme-color"></div>
-                                        <div style="background-color: #889ABF;" class="theme-color"></div>
+                                <button 
+                                    class="theme-btn" 
+                                    onclick="setTheme('01')"
+                                >
+                                    <div 
+                                        class="dark-theme"
+                                    >
+                                        <div 
+                                            style="background-color: #1D1E26;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #202126;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #737272;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #889ABF;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
                                     </div>
-                                    <aside>Dark</aside>
+                                    <aside>
+                                        Dark
+                                    </aside>
                                 </button>
                             </div>
                         </a>
-                        <a href="adjusts.php?light=true">
-                            <div title="Tema Light" id="02" class="themes link">
-
+                        <a 
+                            href="adjusts.php?light=true"
+                        >
+                            <div 
+                                title="Tema Light" 
+                                id="02" 
+                                class="themes link"
+                            >
                                 <!--Tema Light-->
-                                <button class="theme-btn" onclick="setTheme('02')">
-                                    <div class="light-theme">
-                                        <div style="background-color: #ffffff;" class="theme-color"></div>
-                                        <div style="background-color: #EBE8E7;" class="theme-color"></div>
-                                        <div style="background-color: #9DFFEC;" class="theme-color"></div>
-                                        <div style="background-color: #2D73EB;" class="theme-color"></div>
+                                <button 
+                                    class="theme-btn" 
+                                    onclick="setTheme('02')"
+                                >
+                                    <div 
+                                        class="light-theme"
+                                    >
+                                        <div 
+                                            style="background-color: #ffffff;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #EBE8E7;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #9DFFEC;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #2D73EB;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
                                     </div>
-                                    <script src="themeConfig.js"></script>
-                                    <aside>Light</aside>
+                                    <script 
+                                        src="themeConfig.js"
+                                    >
+                                    </script>
+                                    <aside>
+                                        Light
+                                    </aside>
                                 </button>
                             </div>
                         </a>
-                        <a href="adjusts.php?tech=true">
-                            <div title="Tema Tech" id="03" class="themes link">
-
+                        <a 
+                            href="adjusts.php?tech=true"
+                        >
+                            <div 
+                                title="Tema Tech" 
+                                id="03" 
+                                class="themes link"
+                            >
                                 <!--Tema Tech-->
-                                <button class="theme-btn" onclick="setTheme('03')">
-                                    <div class="tech-theme">
-                                        <div style="background-color: #224D59;" class="theme-color"></div>
-                                        <div style="background-color: #3A8499;" class="theme-color"></div>
-                                        <div style="background-color: #58C6E5;" class="theme-color"></div>
-                                        <div style="background-color: #49A5BF;" class="theme-color"></div>
+                                <button 
+                                    class="theme-btn" 
+                                    onclick="setTheme('03')"
+                                >
+                                    <div 
+                                        class="tech-theme"
+                                    >
+                                        <div 
+                                            style="background-color: #224D59;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #3A8499;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #58C6E5;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
+                                        <div 
+                                            style="background-color: #49A5BF;" 
+                                            class="theme-color"
+                                        >
+                                        </div>
                                     </div>
-                                    <aside>Tech</aside>
+                                    <aside>
+                                        Tech
+                                    </aside>
                                 </button>
                             </div>
                         </a>

@@ -6,7 +6,6 @@ require('../connections/mysqliConnection.php');
 //Obtém cores respectivas ao tema gravado no banco de dados
 function getColors()
 {
-
     //Array que conterá as cores
     $systemColors = [];
 

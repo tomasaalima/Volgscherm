@@ -33,19 +33,45 @@ $systemColors = getColors();
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta 
+        charset="UTF-8"
+    >
+    <meta 
+        http-equiv="X-UA-Compatible" 
+        content="IE=edge"
+    >
+    <meta 
+        name="viewport" 
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/printers.css">
-    <link rel="stylesheet" href="/volgscherm/public/css/navMenu.css">
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/base.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/home.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/printers.css"
+    >
+    <link 
+        rel="stylesheet" 
+        href="/volgscherm/public/css/navMenu.css"
+    >
 
     <!--Recurso google para biblioteca de ícones-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link 
+        rel="stylesheet" 
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" 
+    />
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    >
     <style>
         .printer-object {
             width: 30%;
@@ -63,40 +89,74 @@ $systemColors = getColors();
             display: none;
         }
     </style>
-    <title>volgscherm - Painel de Impressoras</title>
+    <title>
+        volgscherm - Painel de Impressoras
+    </title>
 
 </head>
 
 <body>
     <?php
-    include_once('../components/headerBlock.php'); //invocação do header da página 
+        include_once('../components/headerBlock.php'); //invocação do header da página 
     ?>
     <main>
-        <div class="main-nav">
+        <div 
+            class="main-nav"
+        >
             <nav>
 
                 <!--Menu de navegação painel principal / painel de impressoras-->
-                <a href="home.php">DashBoard</a>
-                <a href="#" class="actual">Impressoras</a>
+                <a 
+                    href="home.php"
+                >
+                    DashBoard
+                </a>
+                <a 
+                    href="#" 
+                    class="actual"
+                >
+                    Impressoras
+                </a>
             </nav>
         </div>
-        <div class="main-slots">
-
+        <div 
+            class="main-slots"
+        >
             <!--Barra de busca-->
-            <div title="Campo de busca" class="search-bar">
-                <form action="" method="post">
-                    <input type="text" placeholder="Search.." name="search" class="searchI">
-                    <button title="Buscar" class="glass" type="submit">
-                        <i class="fa fa-search"></i>
+            <div 
+                title="Campo de busca" 
+                class="search-bar"
+            >
+                <form 
+                    action="" 
+                    method="post"
+                >
+                    <input 
+                        type="text" 
+                        placeholder="Search.." 
+                        name="search" 
+                        class="searchI"
+                    >
+                    <button 
+                        title="Buscar" 
+                        class="glass" 
+                        type="submit"
+                    >
+                        <i 
+                            class="fa fa-search"
+                        >
+                        </i>
                     </button>
                 </form>
 
             </div>
 
             <!--Bloco das impressoras-->
-            <div class="objects-container">
+            <div 
+                class="objects-container"
+            >
                 <?php
-                include('../components/printer.php'); //Invocação do arquivo gerador das tabelas(impressoras)
+                    include('../components/printer.php'); //Invocação do arquivo gerador das tabelas(impressoras)
                 ?>
             </div>
         </div>
