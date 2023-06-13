@@ -7,7 +7,7 @@ $host = "localhost";
 $user = "root";
 
 //Senha do proprietário
-$pass = "root";
+$pass = "";
 
 //Nome do banco de dados
 $dbname = "volgscherm";

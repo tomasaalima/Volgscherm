@@ -37,10 +37,10 @@ $systemColors = getColors();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/css/base.css">
-    <link rel="stylesheet" href="../../../public/css/home.css">
-    <link rel="stylesheet" href="../../../public/css/printers.css">
-    <link rel="stylesheet" href="../../../public/css/navMenu.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/printers.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/navMenu.css">
 
     <!--Recurso google para biblioteca de ícones-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />

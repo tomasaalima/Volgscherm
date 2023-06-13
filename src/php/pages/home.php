@@ -6,7 +6,7 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
 //Invoca arquivo com as principais funções do painel dos gráficos
-require('../components/homeControl.php');
+require('../components/../components/homeControl.php');
 
 //Invoca arquivo que protege a sessão, evitando acesso sem log-in
 require('../components/sessionProtection.php');
@@ -26,9 +26,9 @@ require('../components/sessionProtection.php');
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../public/css/base.css">
-    <link rel="stylesheet" href="../../../public/css/home.css">
-    <link rel="stylesheet" href="../../../public/css/navmenu.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/navmenu.css">
 
     <!--Recurso google para biblioteca de ícones-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -253,11 +253,11 @@ require('../components/sessionProtection.php');
         <!--Container de gráficos-->
         <div class="main-dashboard">
             <nav class="period-nav">
-                <a title="Indicador de período 1 Dia" id="1D" href="dashboardHome.php?1D=true">1D</a>
-                <a title="Indicador de período 1 Mês" id="1M" href="dashboardHome.php?1M=true">1M</a>
-                <a title="Indicador de período 5 Meses" id="5M" href="dashboardHome.php?5M=true">5M</a>
-                <a title="Indicador de período 1 Ano" id="1A" href="dashboardHome.php?1A=true">1A</a>
-                <a title="Indicador de período Total" id="MAX" href="dashboardHome.php?MAX=true">MAX</a>
+                <a title="Indicador de período 1 Dia" id="1D" href="../pages/home.php?1D=true">1D</a>
+                <a title="Indicador de período 1 Mês" id="1M" href="../pages/home.php?1M=true">1M</a>
+                <a title="Indicador de período 5 Meses" id="5M" href="../pages/home.php?5M=true">5M</a>
+                <a title="Indicador de período 1 Ano" id="1A" href="../pages/home.php?1A=true">1A</a>
+                <a title="Indicador de período Total" id="MAX" href="../pages/home.php?MAX=true">MAX</a>
             </nav>
 
             <!--Chamado aos gráficos charts-->
@@ -277,9 +277,9 @@ require('../components/sessionProtection.php');
             <!--Links de downloads-->
             <div class="printer-btns">
                 <p title="Realizar download de arquivo em formato de planilha">EXPORTAR RELATÓRIOS:</p>
-                <p title="Planilha com o número de impressões diárias, junto ao número de impressoras ultilizadas"><a href="csvExportOne.php" class="report-btn">TABELA GERAL</a></p>
-                <p title="Planilha com o total de impressões de cada impressora"><a href="csvExportTwo.php" class="report-btn">TABELA IMPRESSORAS</a></p>
-                <p title="Planilha com o total de impressões por setor"><a href="csvExportThree.php" class="report-btn">TABELA SETORES</a></p>
+                <p title="Planilha com o número de impressões diárias, junto ao número de impressoras ultilizadas"><a href="../export/csvOne.php" class="report-btn">TABELA GERAL</a></p>
+                <p title="Planilha com o total de impressões de cada impressora"><a href="../export/csvTwo.php" class="report-btn">TABELA IMPRESSORAS</a></p>
+                <p title="Planilha com o total de impressões por setor"><a href="../export/csvThree.php" class="report-btn">TABELA SETORES</a></p>
             </div>
 
         </div>

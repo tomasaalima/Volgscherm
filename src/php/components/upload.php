@@ -36,7 +36,7 @@ function uploadFileUser()
 
         //Permite apenas arquivos .JPG
         if ($arquivoNovo[sizeof($arquivoNovo) - 1] != 'jpg') {
-            $message = "O arquivo precisa contemplar a seguinte extensão: PNG";
+            $message = "O arquivo precisa contemplar a seguinte extensão: Jpg";
             $icon = "error";
             $title = "tente uma imagem válida";
 

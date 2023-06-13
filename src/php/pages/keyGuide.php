@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/css/base.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
 
     <style>
         body {
@@ -100,7 +100,7 @@
             </div>
         </div>
         <div class="form-btns">
-            <a href="../../index.php">
+            <a href="/volgscherm/index.php">
                 <!--Botão para retorno-->
                 <input class="submit-btn" class="toback" type="button" value="Voltar">
             </a>

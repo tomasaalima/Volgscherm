@@ -49,10 +49,10 @@ uploadFileUser();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/css/base.css">
-    <link rel="stylesheet" href="../../../public/css/home.css">
-    <link rel="stylesheet" href="../../../public/css/sysEdit.css">
-    <link rel="stylesheet" href="../../../public/css/navMenu.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/sysEdit.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/navMenu.css">
 
     <!--Recurso google para biblioteca de ícones-->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
@@ -113,7 +113,7 @@ uploadFileUser();
 
                     <!--Imagem do usuário-->
                     <div title="Imagem do usuário">
-                        <img class="user-img-edit" src="../../../public/uploads/user-img.jpg" alt="imagem do usuário">
+                        <img class="user-img-edit" src="../pages/uploads/user-img.jpg" alt="imagem do usuário">
                     </div>
 
                     <!--Formulário de upload-->

@@ -9,4 +9,5 @@ if (!isset($_SESSION)) {
 session_destroy();
 
 //Redireciona o usuário para tela de login
-header("Location: ../.../../index.php");
+header("Location: /volgscherm/index.php");
+exit;

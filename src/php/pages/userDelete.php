@@ -42,7 +42,7 @@ if (isset($_POST['productKey'])) {
         //Deleta o usuário atual
         $user = $_SESSION['user'];
         $connection->query("DELETE FROM administrador WHERE usuario = '$user'");
-        header('Location: userLogout.php');
+        header('Location: ../components/logout.php');
     }
 }
 
@@ -67,10 +67,10 @@ $systemColors = getColors();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/css/base.css">
-    <link rel="stylesheet" href="../../../public/css/home.css">
-    <link rel="stylesheet" href="../../../public/css/sysEdit.css">
-    <link rel="stylesheet" href="../../../public/css/navMenu.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/sysEdit.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/navMenu.css">
 
     <style>
         article {

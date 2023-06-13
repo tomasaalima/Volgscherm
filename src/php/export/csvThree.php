@@ -4,10 +4,10 @@
 ob_start();
 
 //Invoca arquivo em que existem as variáveis correspondentee as datas
-require('/php/page/dashboardHome_control.php');
+require('../components/homeControl.php');
 
 //Invoca arquivo que realiza a conexão com o banco de dados
-include_once '/php/export/pdoConnection.php';
+include_once '../connections/pdoConnection.php';
 
 //Verifica se foi definido um periodo específico na busca
 if ($period != "MAX") {
@@ -57,6 +57,6 @@ function generateCSV($sql)
         //fclose($file);
 
     } else { // Acessa O ELSE quando não encontrar nenhum registro no BD
-        header("Location: dashboardHome.php");
+        header("Location: ../pages/home.php");
     }
 }

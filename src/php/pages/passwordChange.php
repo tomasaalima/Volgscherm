@@ -6,10 +6,10 @@ header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
 //Invoca arquivo que realiza a conexão com o banco de dados
-require("db_connection.php");
+require("../connections/mysqliConnection.php");
 
 //invoca arquivo contendo dados sobre a chave do produto
-include_once("systemKey.php");
+include_once("../components/systemKey.php");
 
 //Contenção do alerta
 $SweetAlert = false;
@@ -105,9 +105,9 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/css/base.css">
-    <link rel="stylesheet" href="../../../public/css/form.css">
-    <link rel="stylesheet" href="../../../public/css/registration.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/form.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/registration.css">
 
     <title>Mudança de Senha</title>
 
@@ -132,7 +132,7 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
         ?>
     </script>
     <div class="container-login">
-        <img class="logo-image" src="../img/logo.png" alt="logo da empresa">
+        <img class="logo-image" src="/volgscherm/public/img/logo.png" alt="logo da empresa">
         <div class="container-line">
             <hr class="line">
         </div>
@@ -154,7 +154,7 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
                     <a href="keyGuide.php">Resgatar Chave de Acesso</a>
                 </div>
                 <div class="form-btns">
-                    <a class="submit-btn" href="../../index.php">
+                    <a class="submit-btn" href="/volgscherm/index.php">
 
                         <!--Botão de retorno-->
                         <input class="toback" type="button" value="Voltar">

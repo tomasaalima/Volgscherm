@@ -4,7 +4,7 @@
 ob_start();
 
 //Invoca arquivo que realiza a conexão com o banco de dados
-require('../connection/pdoConnection.php');
+require('../connections/pdoConnection.php');
 
 generateCSV("SELECT i.nome, di.serial_impressora, SUM(di.novas_impressoes) FROM impressora i, dados_impressora di WHERE i.serial = di.serial_impressora GROUP BY di.serial_impressora ORDER BY di.novas_impressoes DESC");
 

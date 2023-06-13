@@ -35,10 +35,10 @@ $systemColors = getColors();
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../../../public/css/base.css">
-    <link rel="stylesheet" href="../../../public/css/home.css">
-    <link rel="stylesheet" href="../../../public/css/sysEdit.css">
-    <link rel="stylesheet" href="../../../public/css/navMenu.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/base.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/home.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/sysEdit.css">
+    <link rel="stylesheet" href="/volgscherm/public/css/navMenu.css">
 
     <style>
         article {
@@ -116,7 +116,7 @@ $systemColors = getColors();
                     </p>
                     <!--imagem volgscherm-->
                     <picture title="Logo da impresa">
-                        <img src="../../../public/img/logo.png" alt="logo volgscherm">
+                        <img src="/volgscherm/public/img/logo.png" alt="logo volgscherm">
                     </picture>
                 </div>
             </article>

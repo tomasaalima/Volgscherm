@@ -73,8 +73,8 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Systema de acompanhamento de dados para impressoras compatíveis ao protocolo SNMP v1, v2c e v3">
     <meta name="keywords" content="dashboard, html, charts, impressoras, SNMP">
-    <link rel="stylesheet" href="assets/css/base.css">
-    <link rel="stylesheet" href="assets/css/form.css">
+    <link rel="stylesheet" href="public/css/base.css">
+    <link rel="stylesheet" href="public/css/form.css">
 
     <title>volgscherm</title>
 
@@ -101,7 +101,7 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
     </script>
 
     <div class="container-login">
-        <img class="logo-image" src="assets/img/logo.png" alt="logo da empresa">
+        <img class="logo-image" src="public/img/logo.png" alt="logo da empresa">
         <div class="container-line">
             <hr class="line">
         </div>
@@ -114,8 +114,8 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
                 <label class="label-formulary" for="password">Senha</label>
                 <input class="input-formulary" type="password" name="password" autocomplete="current-password" placeholder=" ••••••••">
                 <div class="sub-elements">
-                    <a href="assets/script/passwordChange.php">Esqueceu Sua Senha?</a>
-                    <a href="assets/script/userCreation.php">Cadastrar Usuário</a>
+                    <a href="src/php/pages/passwordChange.php">Esqueceu Sua Senha?</a>
+                    <a href="src/php/pages/userCreation.php">Cadastrar Usuário</a>
                 </div>
                 <div class="form-btns">
                     <!--Submete ação-->

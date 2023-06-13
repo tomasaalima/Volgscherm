@@ -7,5 +7,5 @@ if (!isset($_SESSION)) {
 
 //Não estando logado, o sistema bloqueia o acesso
 if (!isset($_SESSION['user'])) {
-    die("Você não pode acessar esta página porque não está logado. <p><a href=\"../../index.php\">Entrar</a></p>");
+    die("Você não pode acessar esta página porque não está logado. <p><a href=\"/volgscherm/index.php\">Entrar</a></p>");
 }

@@ -110,7 +110,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                 </a>
             </li>
             <li title="Realizar Logout">
-                <a href="logout.php">
+                <a href="../components/logout.php">
                     <i class="material-symbols-outlined">logout</i>
                     Logout
                 </a>

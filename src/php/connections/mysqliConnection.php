@@ -6,7 +6,7 @@ $dbHost = 'localhost';
 $dbUsername = 'root';
 
 //Senha do proprietário
-$dbPassword = 'root';
+$dbPassword = '';
 
 //Nome do banco de dados
 $dbName = 'volgscherm';
