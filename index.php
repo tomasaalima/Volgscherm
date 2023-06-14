@@ -34,7 +34,7 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
         $user = $connection->real_escape_string($_POST['user']);
         $password = $connection->real_escape_string($_POST['password']);
 
-        $sql = "SELECT * FROM administrador WHERE usuario = '$user' AND senha = '$password'";
+        $sql = "SELECT * FROM administrador WHERE usuario = '$user'";
         $result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
 
         $quantidade = $result->num_rows;
@@ -42,27 +42,33 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
         if ($quantidade == 1) {
             $user_data = $result->fetch_assoc();
 
-            if (!isset($_SESSION)) {
-                session_start();
+            if (password_verify($password, $user_data['senha'])) {
+                if (!isset($_SESSION)) {
+                    session_start();
+                }
+                //concede acesso
+                header("location: src/php/pages/home.php");
+            } else {
+                // Bloqueia acesso
+                $message = "Falha ao logar! Usuário ou Senha Incorretos";
+                $icon = "error";
+                $title = "Dados Inválidos";
+    
+                // Autorização do alerta
+                $SweetAlert = True;
             }
-
-            $_SESSION['user'] = $user_data['usuario'];
-            $_SESSION['password'] = $user_data['password'];
-
-            //concede acesso
-            header("location: src/php/pages/home.php");
         } else {
-            //Bloqueia acesso
+            // Bloqueia acesso
             $message = "Falha ao logar! Usuário ou Senha Incorretos";
             $icon = "error";
             $title = "Dados Inválidos";
-
-            //Autorização do alerta
+    
+            // Autorização do alerta
             $SweetAlert = True;
         }
     }
-}
-?>
+    }
+    ?>
 
 <!DOCTYPE html>
 <html 

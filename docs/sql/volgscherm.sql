@@ -1,4 +1,4 @@
--- phpMyAdmin SQL Dump
+-- phpMyAdmin SQL Dump12
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `administrador` (
   `usuario` varchar(35) NOT NULL,
-  `senha` varchar(20) NOT NULL
+  `senha` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --

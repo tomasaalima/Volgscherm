@@ -89,7 +89,14 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
             //Autorização do alerta
             $SweetAlert = True;
         } else {
-            $sql = "INSERT INTO administrador(usuario,senha) VALUES('$user', '$password')";
+            
+            $options = [
+                'cost' => 12, // O custo determina o tempo necessário para calcular o hash
+            ];
+            $nova_senha = password_hash($password, PASSWORD_BCRYPT, $options);
+            
+            $sql = "INSERT INTO administrador(usuario,senha) VALUES('$user', '$nova_senha')";
+
             $connection->query($sql);
 
             $icon = "success";
