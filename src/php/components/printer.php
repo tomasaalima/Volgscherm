@@ -5,14 +5,21 @@ require('../connections/mysqliConnection.php');
 //Invoca arquivo para controlar busca
 require('searchPrinter.php');
 
-if($search == ''){
-    $sql = "SELECT serial, nome, endereco_ip, data_reconhecimento, modelo, setor FROM impressora";
-}else{
-    $sql = "SELECT serial, nome, endereco_ip, data_reconhecimento, modelo, setor FROM impressora WHERE serial LIKE '%$search%'";
+
+
+function getPrintData($connection, $search) {
+    
+    if($search == ''){
+        $sql = "SELECT serial, nome, endereco_ip, data_reconhecimento, modelo, setor FROM impressora";
+    }else{
+        $sql = "SELECT serial, nome, endereco_ip, data_reconhecimento, modelo, setor FROM impressora WHERE serial LIKE '%$search%'";
+    }
+
+    $result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
+    return $result;
 }
 
-
-$result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
+$result = getPrintData($connection, $search);
 
 //Bloco de impressoras em forma de tabela
 while ($db_data = mysqli_fetch_assoc($result)) {
@@ -39,7 +46,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                             Serial
                         </td>
                         <td>
-                            " . $db_data['serial'] . "
+                            " . htmlspecialchars($db_data['serial']) . "
                         </td>
                     </tr>
                     <tr>
@@ -47,7 +54,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                             Nome
                         </td>
                         <td>
-                            " . $db_data['nome'] . "
+                            " . htmlspecialchars($db_data['nome']) . "
                         </td>
                     </tr>
                     <tr>
@@ -55,7 +62,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                             IP
                         </td>
                         <td>
-                            " . $db_data['endereco_ip'] . "
+                            " . htmlspecialchars($db_data['endereco_ip']) . "
                         </td>
                     </tr>
                     <tr>
@@ -63,7 +70,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                             Reconhecida em
                         </td>
                         <td>
-                            " . $db_data['data_reconhecimento'] . "
+                            " . htmlspecialchars($db_data['data_reconhecimento']) . "
                         </td>
                     </tr>
                     <tr>
@@ -71,7 +78,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                             Modelo
                         </td>
                         <td>
-                            " . $db_data['modelo'] . "
+                            " . htmlspecialchars($db_data['modelo']) . "
                         </td>
                     </tr>
                     <tr>
@@ -79,7 +86,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                             Setor
                         </td>
                         <td>
-                            " . $db_data['setor'] . "
+                            " . htmlspecialchars($db_data['setor']) . "
                         </td>
                     </tr>
                 </tbody>

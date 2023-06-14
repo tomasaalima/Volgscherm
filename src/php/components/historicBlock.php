@@ -3,8 +3,14 @@
 //Invoca arquivo que realiza a conexão com o banco de dados
 require('../connections/mysqliConnection.php');
 
-$sql = "SELECT id, serial_impressora, data_execucao, novas_impressoes FROM dados_impressora ORDER BY data_execucao DESC LIMIT 50";
-$result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
+// queries.php
+function getPrintData($connection) {
+    $sql = "SELECT id, serial_impressora, data_execucao, novas_impressoes FROM dados_impressora ORDER BY data_execucao DESC LIMIT 50";
+    $result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
+    return $result;
+}
+
+$result = getPrintData($connection);
 
 //Cria tabela
 echo "  <table 
@@ -43,22 +49,22 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                 <td 
                     title='Chave identificadora da captura'
                 >
-                    " . $db_data['id'] . "
+                    " . htmlspecialchars($db_data['id']) . "
                 </td>
                 <td 
                     title='Número de fábrica do dispositivo'
                 >
-                    " . $db_data['serial_impressora'] . "
+                    " . htmlspecialchars($db_data['serial_impressora']) . "
                 </td>
                 <td 
                     title='Data de captura do dado'
                 >
-                    " . $db_data['data_execucao'] . "
+                    " . htmlspecialchars($db_data['data_execucao']) . "
                 </td>
                 <td 
                     title='Quantidade de impressões realizadas'
                 >
-                    " . $db_data['novas_impressoes'] . "
+                    " . htmlspecialchars($db_data['novas_impressoes']) . "
                 </td>
             </tr>
         ";

@@ -66,13 +66,13 @@ if ($period != "MAX") {
     }
 
     $sql = "SELECT data_execucao, SUM(novas_impressoes), COUNT(DISTINCT serial_impressora) FROM dados_impressora WHERE data_execucao BETWEEN '$date' and '$today' GROUP BY data_execucao ORDER BY data_execucao ASC";
-    $result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
-
+    
     //Se não, retorna todos os valores no banco de dados
 } else {
     $sql = "SELECT data_execucao, SUM(novas_impressoes), COUNT(DISTINCT serial_impressora) FROM dados_impressora GROUP BY data_execucao ORDER BY data_execucao ASC";
-    $result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
 }
+
+$result = $connection->query($sql) or die("Falha na execução do código SQL") . $connection->error;
 
 //Array que conterá os dados necessários para a um dos charts(gráfico de linha)
 $generalDataArray = [];
