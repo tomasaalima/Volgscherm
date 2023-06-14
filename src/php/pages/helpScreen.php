@@ -14,6 +14,8 @@ require('../connections/mysqliConnection.php');
 //invoca arquivo para trabalhar com os temas do sistema e suas respectivas cores
 require("../components/systemThemeColors.php");
 
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
 
 /*Consulta qual o tema no banco de dados e obtem um Array[4] contendo as cores respectivas ao mesmo */
 $systemColors = getColors();
@@ -45,19 +47,19 @@ $systemColors = getColors();
 
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/base.css"
+        href="<?=$css?>/base.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/home.css"
+        href="<?=$css?>/home.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/sysEdit.css"
+        href="<?=$css?>/sysEdit.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/navMenu.css"
+        href="<?=$css?>/navMenu.css"
     >
 
     <style>
@@ -214,7 +216,7 @@ $systemColors = getColors();
                         title="Logo da impresa"
                     >
                         <img 
-                            src="/volgscherm/public/img/logo.png" 
+                            src="<?=$img?>/logo.png" 
                             alt="logo volgscherm"
                         >
                     </picture>

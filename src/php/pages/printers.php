@@ -14,6 +14,9 @@ require('../components/sessionProtection.php');
 //Invoca arquivo para controlar busca
 require('../components/searchPrinter.php');
 
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
+
 /*Consulta qual o tema no banco de dados e obtem um Array[4] contendo as cores respectivas ao mesmo */
 $systemColors = getColors();
 ?>
@@ -47,19 +50,19 @@ $systemColors = getColors();
 
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/base.css"
+        href="<?=$css?>/base.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/home.css"
+        href="<?=$css?>/home.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/printers.css"
+        href="<?=$css?>/printers.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/navMenu.css"
+        href="<?=$css?>/navMenu.css"
     >
 
     <!--Recurso google para biblioteca de ícones-->

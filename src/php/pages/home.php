@@ -10,6 +10,9 @@ require('../components/../components/homeControl.php');
 
 //Invoca arquivo que protege a sessão, evitando acesso sem log-in
 require('../components/sessionProtection.php');
+
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php')
 ?>
 
 <!--Aplicação das cores de tema ao sistema-->
@@ -37,17 +40,17 @@ require('../components/sessionProtection.php');
     <link 
         rel="stylesheet" 
         
-        href="/volgscherm/public/css/base.css"
+        href="<?=$css?>/base.css"
     >
     <link 
         rel="stylesheet" 
         
-        href="/volgscherm/public/css/home.css"
+        href="<?=$css?>/home.css"
     >
     <link 
         rel="stylesheet" 
         
-        href="/volgscherm/public/css/navmenu.css"
+        href="<?=$css?>/navmenu.css"
     >
 
     <!--Recurso google para biblioteca de ícones-->

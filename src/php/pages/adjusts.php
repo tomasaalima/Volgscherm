@@ -5,6 +5,9 @@ header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
 header("Cache-Control: post-check=0, pre-check=0", false);
 header("Pragma: no-cache");
 
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
+
 //Invoca arquivo que protege a sessão, evitando acesso sem log-in
 require('../components/sessionProtection.php');
 
@@ -59,19 +62,19 @@ uploadFileUser();
 
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/base.css"
+        href="<?=$css?>/base.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/home.css"
+        href="<?=$css?>/home.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/sysEdit.css"
+        href="<?=$css?>/sysEdit.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/navMenu.css"
+        href="<?=$css?>/navMenu.css"
     >
 
     <!--Recurso google para biblioteca de ícones-->
@@ -177,7 +180,7 @@ uploadFileUser();
                     >
                         <img 
                             class="user-img-edit" 
-                            src="../pages/uploads/user-img.jpg" 
+                            src="<?=$uploads?>/user-img.jpg" 
                             alt="imagem do usuário"
                         >
                     </div>

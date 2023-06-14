@@ -11,6 +11,9 @@ require("../connections/mysqliConnection.php");
 //invoca arquivo contendo dados sobre a chave do produto
 include_once("../components/systemKey.php");
 
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
+
 //Contenção do alerta
 $SweetAlert = false;
 
@@ -115,15 +118,15 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
 
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/base.css"
+        href="<?=$css?>/base.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/form.css"
+        href="<?=$css?>/form.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/registration.css"
+        href="<?=$css?>/registration.css"
     >
 
     <title>
@@ -157,7 +160,7 @@ if (isset($_POST['user-name']) || isset($_POST['password']) || isset($_POST['rep
     >
         <img  
             class="logo-image" 
-            src="/volgscherm/public/img/logo.png" 
+            src="<?=$img?>/logo.png" 
             alt="logo da empresa"
         >
         <div 

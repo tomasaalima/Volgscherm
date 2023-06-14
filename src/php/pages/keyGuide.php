@@ -1,3 +1,10 @@
+<?php
+
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -16,7 +23,7 @@
 
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/base.css"
+        href="<?=$css?>/base.css"
     >
 
     <style>

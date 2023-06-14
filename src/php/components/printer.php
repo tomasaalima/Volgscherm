@@ -5,7 +5,8 @@ require('../connections/mysqliConnection.php');
 //Invoca arquivo para controlar busca
 require('searchPrinter.php');
 
-
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
 
 function getPrintData($connection, $search) {
     
@@ -34,7 +35,7 @@ while ($db_data = mysqli_fetch_assoc($result)) {
                         >
                             <img 
                                 width='70%' 
-                                src='../../../public/img/printer.png' 
+                                src='".$img."/printer.png' 
                                 alt='logo de uma impressora'
                             >
                         </th>

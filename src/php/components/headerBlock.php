@@ -1,5 +1,8 @@
 <?php
 
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
+
 // Invoca arquivo que realiza a conexão com o banco de dados
 require('../connections/mysqliConnection.php');
 
@@ -164,7 +167,7 @@ foreach ($statusCounts as $status => $count) {
         >
             <img 
                 class='user-img' 
-                src='../pages/uploads/user-img.jpg' 
+                src="<?=$uploads?>/user-img.jpg"
                 alt='imagem do usuário'
             >
         </div>
@@ -212,7 +215,7 @@ foreach ($statusCounts as $status => $count) {
                 title="Ir para tela de configurações"
             >
                 <a 
-                    href="../pages/adjusts.php"
+                    href="<?=$pages?>/adjusts.php"
                 >
                     <i 
                         class="material-symbols-outlined"
@@ -226,7 +229,7 @@ foreach ($statusCounts as $status => $count) {
                 title="Realizar Logout"
             >
                 <a 
-                    href="../components/logout.php"
+                    href="<?=$components?>/logout.php"
                 >
                     <i 
                         class="material-symbols-outlined"

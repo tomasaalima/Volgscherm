@@ -17,6 +17,9 @@ require('../components/systemThemeColors.php');
 //invoca arquivo contendo dados sobre a chave do produto
 require('../components/systemKey.php');
 
+//Invoca arquivo que guarda variáveis de caminhos
+require('../components/paths.php');
+
 //Contenção do alerta
 $SweetAlert = false;
 
@@ -77,19 +80,19 @@ $systemColors = getColors();
 
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/base.css"
+        href="<?=$css?>/base.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/home.css"
+        href="<?=$css?>/home.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/sysEdit.css"
+        href="<?=$css?>/sysEdit.css"
     >
     <link 
         rel="stylesheet" 
-        href="/volgscherm/public/css/navMenu.css"
+        href="<?=$css?>/navMenu.css"
     >
 
     <style>
