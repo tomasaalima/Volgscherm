@@ -46,6 +46,10 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
                 if (!isset($_SESSION)) {
                     session_start();
                 }
+
+                $_SESSION['user'] = $user_data['usuario'];
+                $_SESSION['password'] = $user_data['password'];
+
                 //concede acesso
                 header("location: src/php/pages/home.php");
             } else {
@@ -202,6 +206,7 @@ if (isset($_POST['user']) || isset($_POST['password'])) {
                     <button 
                         class="submit-btn" 
                         type="submit"
+                        id='exec'
                     >
                         Executar
                     </button>

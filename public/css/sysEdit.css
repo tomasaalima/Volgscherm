@@ -25,7 +25,7 @@ main {
 .user-img-edit {
     width: 200px;
     height: 200px;
-    border: 1px solid var(--palette-D);
+    border: 2px solid var(--palette-D);
     border-radius: 50%;
     object-fit: cover;
 }
@@ -92,7 +92,7 @@ article {
 }
 
 .actual-atribute {
-    border-left: 1px solid var(--palette-D);
+    border-left: 2px solid var(--palette-D);
 }
 
 .actual-atribute:hover {
@@ -136,6 +136,11 @@ article {
     flex-direction: column;
     justify-content: start;
 }
+
 .remote{
     font-size: 25px;
+}
+
+.strong{
+    border-bottom: 2px solid var(--palette-C);
 }

@@ -45,12 +45,12 @@ require('../components/paths.php');
             height: 50%;
             padding: 0px 10px 0px 10px;
             border-radius: 20px;
-            box-shadow: 0 12px 16px 0  rgba(64, 70, 70, 0.808), 0 17px 50px 0  rgba(64, 70, 70, 0.808);
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 
         }
 
         article:hover{
-            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+            box-shadow: 0 12px 16px 0 rgba(64, 70, 70, 0.808), 0 17px 50px 0 rgba(64, 70, 70, 0.808);
         }
 
         article>div {

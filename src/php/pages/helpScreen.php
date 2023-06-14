@@ -169,13 +169,14 @@ $systemColors = getColors();
                         <strong>
                             Volgscherm
                         </strong> 
-                        está em constante desenvolvimento e é disponibilizado remotamente no 
+                        está em constante desenvolvimento e é disponibilizado gratuitamente no 
                         <a 
                             target="_blank" 
                             href="https://github.com/tomasaalima/volgscherm"
                         >
                             <strong 
                                 title="Direcionar ao GitHub"
+                                class="strong"
                             >
                                 GitHub.
                             </strong>
@@ -191,6 +192,7 @@ $systemColors = getColors();
                         >
                             <strong 
                                 title="Enviar E-mail"
+                                class="strong"
                             >
                                 taal@discente.ifpe.edu.br 
                             </strong>
@@ -202,6 +204,7 @@ $systemColors = getColors();
                         >
                             <strong 
                                 title="Enviar E-mail"
+                                class="strong"
                             >
                                 jrem1@discente.ifpe.edu.br.
                             </strong>

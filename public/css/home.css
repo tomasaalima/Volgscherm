@@ -28,6 +28,7 @@ header {
     align-items: center;
     height: 40px;
     font-size: 17px;
+    background-color: var(--palette-B);
 }
 .printer-btns > p{
     margin-left: 15px;
@@ -145,7 +146,8 @@ header {
 }
 
 .actual {
-    border-bottom: 2px solid var(--palette-D);
+    border-bottom: 2px solid var(--palette-C);
+    font-size: 17px;
 }
 
 .main-info, .main-nav>nav {

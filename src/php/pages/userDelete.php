@@ -117,6 +117,7 @@ $systemColors = getColors();
             border-radius: 10px;
             line-height: 25px;
             text-align: center;
+            color: black;
         }
 
 
@@ -134,14 +135,17 @@ $systemColors = getColors();
             line-height: 30px;
             text-align: center;
             width: 190px;
-            color: red;
-            border: 1px solid red;
+            color: black;
         }
 
         .subm:hover{
             cursor: pointer;
             background-color: rgb(212, 95, 95);
             color: white;
+            border: 1px solid red;
+        }
+        .textform{
+            color: var(--palette-D);
         }
 
 
@@ -247,7 +251,7 @@ $systemColors = getColors();
                     action="" 
                     method="post"
                 >
-                    <p>
+                    <p class="textform">
                         Se deletar essa conta será direcionado a tela de login e não poderá mais iniciar sessão com os dados da mesma.
                     </p>
                     <div 
@@ -261,7 +265,7 @@ $systemColors = getColors();
                         </label>
                         <br><br>
                         <input 
-                            type="text" 
+                            type="password" 
                             name="productKey" 
                             class="submit" 
                             placeholder="•••••"

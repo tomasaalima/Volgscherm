@@ -79,7 +79,8 @@ $systemColors = getColors();
         .printer-object {
             width: 30%;
             border-collapse: collapse;
-            padding-top: 30px;
+            padding-top: 50px;
+            margin: 10px;
         }
 
         .objects-container {
